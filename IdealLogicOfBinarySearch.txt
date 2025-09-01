@@ -1,0 +1,22 @@
+Ideal Logic of Binary Seach
+
+public class Solution {
+    public int FindPeakElement(int[] nums) {
+        int start=0;
+        int end=nums.Length-1;
+
+        while(start<end)
+        {
+            int mid= start+(end-start)/2;
+            if(nums[mid]<nums[mid+1]) //our false condition 
+                start=mid+1;
+            else  //best cases. 
+                end=mid;
+        }
+
+        return start;
+    }
+}
+
+
+Idea way of solving problem by binary Search algorithm.

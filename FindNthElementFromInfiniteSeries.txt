@@ -1,0 +1,32 @@
+Nice way to Find Nth Digit:
+
+public class Solution{
+
+	public int FindNthDigit(int n)
+	{
+		longs digits = 1;
+		long count=9;
+		long start=1;
+		
+		while(n>digits*count){
+		n-=(int)(digits*count);
+		digits++;
+		count*=10;
+		start*=10;
+		
+		}
+		
+		start+=(n-1)/digits;
+		string s = start.ToString();
+		
+		return s[(n-1)%(int)digits]-'0';
+	}
+	
+}
+
+
+
+Beutiful way to find Nth digits form infinite serires need to have knowldge of above assumption 
+
+Nice way to do.
+
